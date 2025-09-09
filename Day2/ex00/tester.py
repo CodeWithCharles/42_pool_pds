@@ -34,7 +34,7 @@ def test_invalid_height_type():
     """
     print("\n--- Test: Invalid type in height list ---")
     try:
-        give_bmi(["1.75", 1.80], [70, 80])
+        give_bmi(["1.75", 1.80], [70, 80])  # type: ignore
     except AssertionError as e:
         print("Caught expected error:", e)
 
@@ -46,7 +46,7 @@ def test_invalid_weight_type():
     """
     print("\n--- Test: Invalid type in weight list ---")
     try:
-        give_bmi([1.75, 1.80], [70, "80"])
+        give_bmi([1.75, 1.80], [70, "80"])  # type: ignore
     except AssertionError as e:
         print("Caught expected error:", e)
 
@@ -58,7 +58,7 @@ def test_invalid_bmi_type_in_apply_limit():
     """
     print("\n--- Test: Invalid type in BMI list for apply_limit ---")
     try:
-        apply_limit([22.5, "29.0"], 25)
+        apply_limit([22.5, "29.0"], 25)  # type: ignore
     except AssertionError as e:
         print("Caught expected error:", e)
 
@@ -70,7 +70,7 @@ def test_invalid_limit_type():
     """
     print("\n--- Test: Invalid type for limit ---")
     try:
-        apply_limit([22.5, 29.0], "25")
+        apply_limit([22.5, 29.0], "25")  # type: ignore
     except AssertionError as e:
         print("Caught expected error:", e)
 

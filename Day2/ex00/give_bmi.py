@@ -25,7 +25,7 @@ def give_bmi(height: list[int | float],
         raise AssertionError("Weight must only contain ints or floats")
 
     bmi = np.array(weight) / (np.array(height) ** 2)
-    return bmi.tolist()
+    return bmi.tolist()  # type: ignore
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:

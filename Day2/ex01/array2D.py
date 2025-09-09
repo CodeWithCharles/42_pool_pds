@@ -27,3 +27,4 @@ def slice_me(family: list, start: int, end: int) -> list:
         return np.array(family)[start:end].tolist()
     except Exception as e:
         print(f"{Exception.__name__}: {e}")
+        return []
