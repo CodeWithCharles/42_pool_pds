@@ -28,7 +28,7 @@ def ft_load(path: str) -> np.ndarray:
                                   Supported: {supported_ext}")
         img = Image.open(path)
         print(f"The shape of the image is: \
-({img.size[1]},{img.size[0]},{img.layers})")  # type: ignore
+({img.size[0]},{img.size[1]},{img.layers})")  # type: ignore
         return np.array(img)
     except Exception as e:
         print(f"{Exception.__name__}: {e}")
