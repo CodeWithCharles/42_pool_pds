@@ -30,7 +30,7 @@ def main():
         max_range = 0
         try:
             max_range = int(sys.argv[1])
-        except ValueError as e:
+        except ValueError:
             raise ValueError("bad argument: max_range must be an int")
 
         if max_range <= 0:

@@ -2,6 +2,7 @@ import os
 from tqdm import tqdm
 import sys
 
+
 def build(verb: bool):
     with tqdm(total=100, desc="Build  ") as pbar:
         os.system(f"python3 setup.py sdist bdist_wheel\
@@ -31,6 +32,7 @@ def test(verb: bool):
     print("-------------- TESTS --------------")
     os.system("python3 tester.py")
 
+
 def uninstall(verb: bool):
     os.system("rm -rf build")
     os.system("rm -rf dist")
@@ -38,22 +40,27 @@ def uninstall(verb: bool):
     os.system("rm -rf ft_package/__pycache__")
     os.system("pip3 uninstall ft_package")
 
+
 def full_install(verb: bool):
     build(verb)
     install(verb)
     show(verb)
 
+
 def full_run(verb: bool):
     full_install(verb)
     test(verb)
+
 
 def re(verb: bool):
     uninstall(verb)
     full_install(verb)
 
+
 def re_test(verb: bool):
     re(verb)
     test(verb)
+
 
 def main():
     callable_func = {
@@ -70,9 +77,9 @@ def main():
     try:
         verbose_mode = False
         if (len(sys.argv) < 2 or sys.argv[1] not in callable_func):
-            raise AssertionError(f"Usage: main.py <func> [-v, --verbose]")
+            raise AssertionError("Usage: main.py <func> [-v, --verbose]")
         if (len(sys.argv) == 3 and sys.argv[2] not in ["-v", "--verbose"]):
-            raise AssertionError(f"Usage: main.py <func> [-v, --verbose]")
+            raise AssertionError("Usage: main.py <func> [-v, --verbose]")
         if (len(sys.argv) == 3):
             verbose_mode = True
         callable_func[sys.argv[1]](verbose_mode)

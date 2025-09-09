@@ -47,7 +47,7 @@ def main():
                 s += "\n"
             except EOFError:
                 sys.exit()
-            except KeyboardInterrupt
+            except KeyboardInterrupt:
                 sys.exit()
         elif (len(sys.argv) == 2):
             s = sys.argv[1]

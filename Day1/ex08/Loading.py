@@ -40,12 +40,11 @@ def ft_tqdm(lst: range) -> None:
     the terminal width.
     """
     total = len(lst)
-    has_backtracked = False
     start_time = time.time()
 
     terminal_width = shutil.get_terminal_size().columns
 
-    meta_width = 28 # Fixed, corresponds to the size of static
+    meta_width = 28
     max_len = len(f"{total}")
     progress_bar_width = max(10, terminal_width - meta_width - max_len * 2)
 
@@ -63,7 +62,10 @@ def ft_tqdm(lst: range) -> None:
         progress_bar = f"|{'█' * progress:<{actual_width}}|"
         percent = f"{int(progress_ratio * 100):03}%"
         iter_info = f"{i:0{max_len}}/{total:0{max_len}}"
-        time_info = f"[{elapsed_fmt}<{eta_fmt}, {speed:{int(terminal_width - meta_width - progress_bar_width - max_len * 2) + len(f"{speed:.2f}")}.2f}it/s]"
+        speed_w = int(terminal_width - meta_width)
+        speed_w = int(speed_w - progress_bar_width - max_len * 2)
+        speed_w = int(speed_w + len(f"{speed:.2f}"))
+        time_info = f"[{elapsed_fmt}<{eta_fmt}, {speed:{speed_w}.2f}it/s]"
         line = f"{percent}{progress_bar} {iter_info} {time_info}"
         print(f"\r{line.ljust(terminal_width)}", end="", flush=True)
 
