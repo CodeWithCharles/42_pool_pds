@@ -46,7 +46,9 @@ def main():
                 s = input("Input text to analyze :\n")
                 s += "\n"
             except EOFError:
-                pass
+                sys.exit()
+            except KeyboardInterrupt
+                sys.exit()
         elif (len(sys.argv) == 2):
             s = sys.argv[1]
         elif (len(sys.argv) > 2):
