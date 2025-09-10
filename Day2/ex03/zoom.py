@@ -5,6 +5,7 @@ import os
 from load_image import ft_load
 import matplotlib.pyplot as plt
 
+
 def main():
     """Loads an image, zoom on it and displays it.
     If no arguments are given, will default to animal.jpeg
