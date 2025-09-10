@@ -16,8 +16,7 @@ def main():
         - tqdm over range(0, arg)
 
     Raises:
-        AssertionError if:
-            - No argument or more than one is provided
+        AssertionError: - No argument or more than one is provided
             - Argument is not a positive integer
 
     Displays:
