@@ -64,4 +64,4 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     Returns:
         np.ndarray: The image array to greyscale
     """
-    return np.dot(array[...,:3], [0.2989,0.5870,0.1140])
+    return np.dot(array[..., :3], [0.2989, 0.5870, 0.1140])

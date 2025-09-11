@@ -67,7 +67,7 @@ def main():
             img = a2
         transposed_image = transpose_image(img)
 
-        plt.imshow(transposed_image)
+        plt.imshow(np.array(transposed_image))
         plt.title("Transposed Image")
         plt.axis('on')
         plt.show()
