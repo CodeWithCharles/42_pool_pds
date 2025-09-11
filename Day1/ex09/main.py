@@ -11,7 +11,7 @@ def build(verb: bool):
     """
     with tqdm(total=100, desc="Build  ") as pbar:
         os.system(f"python3 setup.py sdist bdist_wheel\
-                  {" > /dev/null 2>&1" if not verb else ""}")
+{' > /dev/null 2>&1' if not verb else ''}")
         pbar.update(100)
     print()
 
@@ -24,7 +24,7 @@ def install(verb: bool):
     """
     with tqdm(total=100, desc="Install") as pbar:
         os.system(f"pip3 install ./dist/ft_package-0.0.1.tar.gz\
-            {"> /dev/null 2>&1" if not verb else ""}")
+{'> /dev/null 2>&1' if not verb else ''}")
         pbar.update(100)
     print()
 
