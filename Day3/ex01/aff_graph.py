@@ -4,6 +4,7 @@ import seaborn as sns
 from sys import argv
 import pandas as pd
 
+
 def main():
     """Loads a csv file specified in argv[1] (default life_expectancy.csv)
 then displays the informations for France in a seaborn lineplot graph
@@ -39,7 +40,6 @@ then displays the informations for France in a seaborn lineplot graph
                 xticks=range(1800, 2100, 40)
             )
 
-            plot.set_xticklabels(rotation=45)
             plot.tight_layout()
             plt.show()
 
