@@ -11,7 +11,7 @@ class Baratheon(Character):
             first_name (str): Name of the Baratheon character
             is_alive (bool, optional): Is the character alive. \
 Defaults to True."""
-        super().__init__(first_name, is_alive)
+        super().__init__(first_name, is_alive=is_alive)
         self.family_name = "Baratheon"
         self.eyes = "brown"
         self.hairs = "dark"
@@ -36,7 +36,7 @@ Defaults to True."""
 class Lannister(Character):
     """Class representing a Character of the Lannister house"""
 
-    def __init__(self, first_name: str, is_alive: bool = True):
+    def __init__(self, first_name: str = "Lannister", is_alive: bool = True):
         """Constructor of a Lannister character. Calls super().__init__(args)
 
         Args:
