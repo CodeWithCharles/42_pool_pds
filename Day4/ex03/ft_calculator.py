@@ -15,7 +15,6 @@ class calculator:
         self.vector = [x + object for x in self.vector]
         print(self.vector)
 
-
     def __sub__(self, object) -> None:
         """Substracts object to each elements of the vector
 
@@ -25,7 +24,6 @@ class calculator:
         self.vector = [x - object for x in self.vector]
         print(self.vector)
 
-
     def __mul__(self, object) -> None:
         """Multiplies object with each elements of the vector
 
@@ -33,7 +31,6 @@ class calculator:
             object (_type_): Object to mulitply"""
         self.vector = [x * object for x in self.vector]
         print(self.vector)
-
 
     def __truediv__(self, object) -> None:
         """Divides object to each elements of the vector
