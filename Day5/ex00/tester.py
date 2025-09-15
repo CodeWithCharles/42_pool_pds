@@ -1,4 +1,4 @@
-from statistics import ft_statistics # type: ignore
+from statistics import ft_statistics  # type: ignore
 
 
 def main():
